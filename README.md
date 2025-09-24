@@ -1,4 +1,4 @@
-# imdb-sentiment-checker
+# imdb-sentiment-analyzer
 
 This repo provides an IMDb review sentiment system with a fine‑tuned RoBERTa classifier, plus two production features: sarcasm awareness and concise summarization within a Streamlit UI loaded via Transformers pipelines.
 
