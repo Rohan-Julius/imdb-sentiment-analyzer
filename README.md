@@ -6,14 +6,14 @@ Method
 - Sentiment: the notebook fine‑tunes a RoBERTa‑family sequence classifier on IMDb and exports it via save_pretrained, ensuring a valid config.json and tokenizer for AutoModel/AutoTokenizer loading in the app.
 - Also performed fine-tuned distillBERT model whose accuracy is slightly lesser.
 
-Additonal Features:
+Additonal Features:  
 - Sarcasm: the app uses a T5 text‑to‑text sarcasm model; to stabilize outputs on long reviews, decoding is deterministic and predictions are aggregated over sentences with lightweight lexical backstops.
 - Summarization: BART‑CNN generates summaries with beam search and tokenizer‑aware min/max lengths to avoid clipped or rambling outputs; summaries are lightly tidied for casing and final punctuation.
 
-Why sarcasm and summary:
+Why sarcasm and summary:  
 Sarcasm can invert sentiment cues, so a detector helps contextualize confidence and warn when sentiment may mislead, while a short summary improves readability for long reviews in the UI.
 
-Streamlit app
+Streamlit app :  
 The app caches all pipelines with st.cache_resource for fast reruns and loads the pushed model repo id directly via pipeline("text-classification"), displaying color‑coded labels and confidence, a sarcasm warning when triggered, and a cleaned BART summary.
 
 Model results
