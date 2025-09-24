@@ -10,7 +10,6 @@ Additonal Features:
 - Sarcasm: the app uses a T5 text‑to‑text sarcasm model; to stabilize outputs on long reviews, decoding is deterministic and predictions are aggregated over sentences with lightweight lexical backstops.
 - Summarization: BART‑CNN generates summaries with beam search and tokenizer‑aware min/max lengths to avoid clipped or rambling outputs; summaries are lightly tidied for casing and final punctuation.
 
-
 Why sarcasm and summary:
 Sarcasm can invert sentiment cues, so a detector helps contextualize confidence and warn when sentiment may mislead, while a short summary improves readability for long reviews in the UI.
 
@@ -23,8 +22,6 @@ Model results
 - Classical baselines perform competitively but below Transformers: TF‑IDF + Logistic Regression reaches Accuracy/F1 ≈ 0.914, while TF‑IDF + Linear SVM reaches ≈ 0.920, confirming feature‑engineered linear models are solid but outperformed by contextual encoders.
 - Recommendation: use roBERTa for highest quality, use DistilBERT when latency or memory is constrained, and keep TF‑IDF baselines as interpretable references or low‑resource fallbacks
   
-
 Links
-
--Google colab: https://colab.research.google.com/drive/1Elb_iCFLgrwIcANbZwZihPfNyeBQDqgx#scrollTo=oVl0yNIiRQNd 
--Hugging face model: https://huggingface.co/rohan10juli/roBERT-imdb-sentiment-tuned
+- Google colab: https://colab.research.google.com/drive/1Elb_iCFLgrwIcANbZwZihPfNyeBQDqgx#scrollTo=oVl0yNIiRQNd 
+- Hugging face model: https://huggingface.co/rohan10juli/roBERT-imdb-sentiment-tuned
