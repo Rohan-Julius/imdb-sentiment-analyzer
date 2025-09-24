@@ -1,8 +1,5 @@
 # imdb-sentiment-checker
 
-Here’s a concise README aligned with the Colab workflow and the Streamlit app.
-
-Project summary
 This repo provides an IMDb review sentiment system with a fine‑tuned RoBERTa classifier, plus two production features: sarcasm awareness and concise summarization within a Streamlit UI loaded via Transformers pipelines.
 
 Method
@@ -14,7 +11,7 @@ Additonal Features:
 - Summarization: BART‑CNN generates summaries with beam search and tokenizer‑aware min/max lengths to avoid clipped or rambling outputs; summaries are lightly tidied for casing and final punctuation.
 
 
-Why sarcasm and summary
+Why sarcasm and summary:
 Sarcasm can invert sentiment cues, so a detector helps contextualize confidence and warn when sentiment may mislead, while a short summary improves readability for long reviews in the UI.
 
 Streamlit app
