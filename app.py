@@ -122,11 +122,12 @@ if run_btn and user_input.strip():
         sent_score = s_out.get("score")
 
     if "pos" in sent_label.lower():
-        st.success(f"✅ Sentiment: {sent_label} (Confidence: {sent_score:.2f})" if sent_score is not None else f"✅ Sentiment: {sent_label}")
+        st.success(f"✅ Sentiment: {sent_label}")  
     elif "neg" in sent_label.lower():
-        st.error(f"❌ Sentiment: {sent_label} (Confidence: {sent_score:.2f})" if sent_score is not None else f"❌ Sentiment: {sent_label}")
+        st.error(f"❌ Sentiment: {sent_label}")   
     else:
-        st.info(f"ℹ️ Sentiment: {sent_label} (Confidence: {sent_score:.2f})" if sent_score is not None else f"ℹ️ Sentiment: {sent_label}")
+        st.info(f"ℹ️ Sentiment: {sent_label}")    
+
 
     with st.spinner("Generating summary..."):
         summary = summarize_clean(text)  # [web:101]
