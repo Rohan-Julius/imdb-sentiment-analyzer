@@ -3,6 +3,7 @@
 This repo provides an IMDb review sentiment system with a fine‑tuned RoBERTa classifier, plus two production features: sarcasm awareness and concise summarization within a Streamlit UI loaded via Transformers pipelines.
 
 App is deployed and live at : https://imdb-sentiment-analyzer-llquvgtpyurcejlfb8ggj2.streamlit.app/  
+.ipynb file preview isn't working on github, refer this https://colab.research.google.com/drive/1Elb_iCFLgrwIcANbZwZihPfNyeBQDqgx#scrollTo=oVl0yNIiRQNd  
 
 Method
 - Sentiment: the notebook fine‑tunes a RoBERTa‑family sequence classifier on IMDb and exports it via save_pretrained, ensuring a valid config.json and tokenizer for AutoModel/AutoTokenizer loading in the app.
