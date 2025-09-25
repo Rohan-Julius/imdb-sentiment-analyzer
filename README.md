@@ -26,5 +26,8 @@ Model results
   
 Links  
 - Google colab: https://colab.research.google.com/drive/1Elb_iCFLgrwIcANbZwZihPfNyeBQDqgx#scrollTo=oVl0yNIiRQNd  
-- Hugging face model: https://huggingface.co/rohan10juli/roBERT-imdb-sentiment-tuned
+- Hugging face model : https://huggingface.co/rohan10juli/roBERT-imdb-sentiment-tuned
+
+Demo:  
+https://github.com/user-attachments/assets/2c129271-04fa-4f44-ba99-e735acbfb025
 
