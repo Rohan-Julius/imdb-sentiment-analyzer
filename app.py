@@ -43,17 +43,17 @@ def load_models():
         sentiment = pipeline(
             "text-classification",
             model="rohan10juli/roBERT-imdb-sentiment-tuned",
-            device_map="auto"
+            device=-1
         )
         sarcasm_t5 = pipeline(
             "text2text-generation",
             model="mrm8488/t5-base-finetuned-sarcasm-twitter",
-            device_map="auto"
+            device=-1
         )
         summarizer = pipeline(
             "summarization",
             model="facebook/bart-large-cnn",
-            device_map="auto"
+            device=-1
         )
         tok_sum = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
     return sentiment, sarcasm_t5, summarizer, tok_sum
