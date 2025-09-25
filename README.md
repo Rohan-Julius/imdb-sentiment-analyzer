@@ -2,6 +2,8 @@
 
 This repo provides an IMDb review sentiment system with a fine‑tuned RoBERTa classifier, plus two production features: sarcasm awareness and concise summarization within a Streamlit UI loaded via Transformers pipelines.
 
+App is deployed and live at : https://imdb-sentiment-analyzer-llquvgtpyurcejlfb8ggj2.streamlit.app/  
+
 Method
 - Sentiment: the notebook fine‑tunes a RoBERTa‑family sequence classifier on IMDb and exports it via save_pretrained, ensuring a valid config.json and tokenizer for AutoModel/AutoTokenizer loading in the app.
 - Also performed fine-tuned distillBERT model whose accuracy is slightly lesser.
@@ -22,6 +24,6 @@ Model results
 - Classical baselines perform competitively but below Transformers: TF‑IDF + Logistic Regression reaches Accuracy/F1 ≈ 0.914, while TF‑IDF + Linear SVM reaches ≈ 0.920, confirming feature‑engineered linear models are solid but outperformed by contextual encoders.
 - Recommendation: use roBERTa for highest quality, use DistilBERT when latency or memory is constrained, and keep TF‑IDF baselines as interpretable references or low‑resource fallbacks
   
-Links
-- Google colab:https://colab.research.google.com/drive/1Elb_iCFLgrwIcANbZwZihPfNyeBQDqgx#scrollTo=oVl0yNIiRQNd 
+Links  
+- Google colab: https://colab.research.google.com/drive/1Elb_iCFLgrwIcANbZwZihPfNyeBQDqgx#scrollTo=oVl0yNIiRQNd  
 - Hugging face model: https://huggingface.co/rohan10juli/roBERT-imdb-sentiment-tuned
